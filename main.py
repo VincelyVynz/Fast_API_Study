@@ -15,7 +15,7 @@ def greet(name:str):
 
 @app.get('/time')
 def tell_time():
-    time_now = datetime.now()
+    time_now = datetime.now().strftime("%A, %B %d %Y, %I:%M %p")
     return {"Time": f"The time now is {time_now}"}
 
 
