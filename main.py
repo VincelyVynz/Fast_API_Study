@@ -23,3 +23,7 @@ def tell_time():
 def user_age(user:str, age:int):
     return {"msg": f"User {user} is {age} years old"}
 
+@app.get('/weather/{city}')
+def weather(city:str):
+    city = city.title()
+    return {'Weather report' : f'30 % chance for rain in {city}'}
