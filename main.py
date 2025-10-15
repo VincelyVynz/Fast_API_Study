@@ -19,3 +19,7 @@ def tell_time():
     return {"Time": f"The time now is {time_now}"}
 
 
+@app.get('/user/{user}/age/{age}')
+def user_age(user:str, age:int):
+    return {"msg": f"User {user} is {age} years old"}
+
